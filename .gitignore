@@ -6,7 +6,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
+TODO
+test.html
+upload-app.jpg
 node_modules
 dist
 dist-ssr
