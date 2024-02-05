@@ -5,7 +5,7 @@ const RadioButtons = ({options,name}) =>
             {
                 options.map( (option)=> (
                     
-                    <div className="flex items-center">
+                    <div key={option} className="flex items-center">
                         <div className="bg-white dark:bg-gray-100 rounded-full w-3 h-3 flex justify-center items-center relative">
                             <input 
                                 type = "radio" 
@@ -14,7 +14,7 @@ const RadioButtons = ({options,name}) =>
                             />
                             <div className="check-icon hidden border-4 border-indigo-700 rounded-full w-1 h-1 z-1"></div>
                         </div>
-                        <label id="label1" class="ml-2  text-gray-800">{option}</label>
+                        <label id="label1" className="ml-2  text-gray-800">{option}</label>
                     </div>
                 
                 ))

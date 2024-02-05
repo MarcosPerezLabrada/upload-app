@@ -1,7 +1,4 @@
-import { useState } from "react"
-
 const Select = ({ label, options, title, toleranceIcon}) => {
-    const [value, setValue] = useState('title')
     return (
         <div className="flex w-full justify-between py-1 items-center">
             {
@@ -10,10 +7,7 @@ const Select = ({ label, options, title, toleranceIcon}) => {
             <div className="flex gap-2 items-center">
                 <select 
                     className="border rounded w-full px-1 py-2"
-                    defaultValue='title'
-                    onInput={ (event) => {
-                        setValue(event.value)
-                    }} 
+                    defaultValue='title' 
                     >
                     <option 
                         id='title' 
@@ -22,7 +16,7 @@ const Select = ({ label, options, title, toleranceIcon}) => {
                     </option>
                     {
                         options.map( option => (
-                            <option id = { option.id }>
+                            <option key = { option.id }>
                                 {option.label}
                             </option>
                         ))

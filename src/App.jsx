@@ -17,7 +17,7 @@ function App() {
   {
     return (
       <>
-        <button onClick = { ()=> {setSelected(true)} }>
+        <button className='blue-color white-text p-0 w-36 h-6' onClick = { ()=> {setSelected(true)} }>
           Upload 
         </button>
       </>

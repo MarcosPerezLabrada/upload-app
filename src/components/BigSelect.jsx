@@ -1,7 +1,4 @@
-import { useState } from "react"
-
 const BigSelect = ({ label, options, title, toleranceIcon}) => {
-    const [value, setValue] = useState('title')
     return (
         <div className="flex w-full justify-between py-1 items-center font-extrabold">
             {
@@ -11,9 +8,6 @@ const BigSelect = ({ label, options, title, toleranceIcon}) => {
                 <select 
                     className="border rounded w-full px-1 py-2"
                     defaultValue='title'
-                    onInput={ (event) => {
-                        setValue(event.value)
-                    }} 
                     >
                     <option 
                         id='title' 
@@ -22,7 +16,7 @@ const BigSelect = ({ label, options, title, toleranceIcon}) => {
                     </option>
                     {
                         options.map( option => (
-                            <option id = { option.id }>
+                            <option key = { option.id }>
                                 {option.label}
                             </option>
                         ))

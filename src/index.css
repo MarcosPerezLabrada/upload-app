@@ -17,16 +17,16 @@ body {
 
 h1
 {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 20px !important;
+  font-weight: 600 !important;
   color: #092c4c;
 }
 h2
 {
-  font-size: 14px;
+  font-size: 14px !important;
 }
 label{
-  font-size: 10px;
+  font-size: 10px !important;
 }
 
 .cancel-button
@@ -36,10 +36,6 @@ label{
   background-color: white;
 }
 
-.small-header
-{
-  font-weight: 800;
-}
 
 .success-color
 {
@@ -57,10 +53,10 @@ button {
 
 .blue-color
 {
-  background-color: #1c3e6e;
+  background-color: #1c3e6e !important;
 }
 .white-text{
-  color: #e1e6ec;
+  color: #e1e6ec !important;
 }
 #root {
   max-width: 1720px;

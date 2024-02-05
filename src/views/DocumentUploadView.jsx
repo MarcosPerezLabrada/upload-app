@@ -25,7 +25,7 @@ export default function DocumentUploadView() {
               }
             />
             <hr className="w-1/2"/>
-            <p className="font-extrabold">Select a manifest you'd like to import</p>
+            <p className="font-extrabold">{"Select a manifest you'd like to import"}</p>
             <DragAndDrog/>
             <div className="flex flex-col items-start">
               <hr className="w-4/5"/>

@@ -12,11 +12,13 @@ const DragAndDrog = () => {
     event.preventDefault();
     const files = event.dataTransfer.files;
     if (files.length > 0) {
-      handleDroppedFile(files[0]);
+      handleDroppedFile(files[files.length-1]);
     }
   }
 
   function handleDroppedFile(file) {
+    const fileInput = document.getElementById("fileInput");
+    fileInput.value=null
     setFile(file);
   }
 
@@ -68,7 +70,7 @@ const DragAndDrog = () => {
                 <p style={{ color: "#cac9ce" }}>{file.name}</p>
                 <p className="mr-0">{Math.round((file.size / 1048576) * 10) / 10}MB</p>
               </div>  
-              <div class="progress-container">
+              <div className="progress-container">
                 <div className="progress-bar"></div>
               </div>
             </div>
