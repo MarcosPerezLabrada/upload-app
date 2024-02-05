@@ -1,13 +1,13 @@
 import { useState } from "react"
 
-const Select = ({ label, options, title, toleranceIcon}) => {
+const BigSelect = ({ label, options, title, toleranceIcon}) => {
     const [value, setValue] = useState('title')
     return (
-        <div className="flex w-full justify-between py-1 items-center">
+        <div className="flex w-full justify-between py-1 items-center font-extrabold">
             {
                 !!label && <p className="min-w-max"> {label} </p>
             }
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-2 items-center w-full ">
                 <select 
                     className="border rounded w-full px-1 py-2"
                     defaultValue='title'
@@ -36,4 +36,4 @@ const Select = ({ label, options, title, toleranceIcon}) => {
         
     )
 }
-export default Select
+export default BigSelect

@@ -1,19 +1,27 @@
-const RadioButtons = ({options}) => 
+const RadioButtons = ({options,name}) => 
 ( 
-    <fieldset className="flex gap-3">
-        {
-            options.map( (option)=> (
+    <>
+        <fieldset className="flex gap-3 pt-1 py-2">
+            {
+                options.map( (option)=> (
+                    
+                    <div className="flex items-center">
+                        <div className="bg-white dark:bg-gray-100 rounded-full w-3 h-3 flex justify-center items-center relative">
+                            <input 
+                                type = "radio" 
+                                name = {name} 
+                                className = "checkbox appearance-none border rounded-full border-gray-400 checked:border-blue-900 absolute cursor-pointer w-full h-full checked:bg-blue-900 checked:ring-2 checked:ring-blue-900 checked:ring-offset-2" 
+                            />
+                            <div className="check-icon hidden border-4 border-indigo-700 rounded-full w-1 h-1 z-1"></div>
+                        </div>
+                        <label id="label1" class="ml-2  text-gray-800">{option}</label>
+                    </div>
                 
-                <div class="flex items-center mb-4">
-                    <input id={option} type="radio" name="countries" value={option} class="w-4 h-4 border-gray-300 focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-600 dark:bg-gray-700 dark:border-gray-600"/>
-                    <label for={option} class="block ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                        {option}
-                    </label>
-                </div>
+                ))
+            }
+        </fieldset>
             
-            ))
-        }
-    </fieldset>
+    </>
 )
 
 

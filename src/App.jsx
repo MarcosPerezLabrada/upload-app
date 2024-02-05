@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 import  Modal  from './components/Modal'
 import DocumentUploadView from './views/DocumentUploadView'
 function App() {
